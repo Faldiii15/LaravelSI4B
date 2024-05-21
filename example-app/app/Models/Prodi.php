@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Prodi extends Model
 {
     use HasFactory;
+
+    public function fakultas(){
+        return $this ->belongsTo(fakultas::class, 'fakultas_id');
+        // return $this->belongsTo(Nama_Model::class, 'foreign_key');
+        // 1 prodi 1 fakultas belongsTo
+    }
 }

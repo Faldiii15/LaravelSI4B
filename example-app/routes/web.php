@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FakultasController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,5 +39,9 @@ Route::get('listdata',function(){
     ->with('viewlist',$list)
     ->with('viewmhs',$listmhs); 
 });
+
+route::resource('Fakultas', FakultasController::class);
+route::resource('Prodi', ProdiController::class);
+
  
 
