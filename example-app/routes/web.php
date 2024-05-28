@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\FakultasController;
 
 Route::get('/', function () {
@@ -40,8 +41,8 @@ Route::get('listdata',function(){
     ->with('viewmhs',$listmhs); 
 });
 
-route::resource('Fakultas', FakultasController::class);
-route::resource('Prodi', ProdiController::class);
+route::resource('fakultas', FakultasController::class);
+route::resource('prodi', ProdiController::class);
 
  
 
