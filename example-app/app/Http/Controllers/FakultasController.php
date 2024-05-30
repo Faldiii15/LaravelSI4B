@@ -39,8 +39,10 @@ class FakultasController extends Controller
             'singkatan' => "required|max:4"
         ]);
 
+        // Simpan Ke table fakultas
         Fakultas::create($val);
-
+        
+        // redirect ke halaman list program studi
         return redirect()->route('fakultas.index')->with('success',$val['nama'].'berhasil disimpan');
     }
 

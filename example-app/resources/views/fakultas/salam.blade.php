@@ -1,1 +1,0 @@
- <h1> Selamat{{ $viewsalam}} </Selamat></h1>

@@ -18,7 +18,7 @@
             <thead>
               <tr>
                 <th>Nama Fakultas</th>
-                <th>Singkatan.</th>
+                <th>Singkatan</th>
               </tr>
             </thead>
             <tbody>
@@ -35,5 +35,19 @@
       </div>
     </div>
   </div>
+  {{-- Membuat Tampilan Success --}}
+  @if (session('success'))
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> 
+    </script>
+
+    <script>
+    Swal.fire({
+      title: "Good Job",
+      text: "{{session('success')}}",
+      icon: "success"
+    })</script>
+      
+  @endif
+
 @endsection
  
