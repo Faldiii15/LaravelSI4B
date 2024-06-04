@@ -13,8 +13,10 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $prodi = Prodi::all();
+        return view(('prodi.index'))
+                ->with('prodi',$prodi);
+    }   
 
     /**
      * Show the form for creating a new resource.

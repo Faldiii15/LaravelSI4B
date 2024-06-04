@@ -34,6 +34,27 @@
             <div class="badge badge-info badge-pill">2</div>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url('fakultas')}}">
+            <i class="mdi mdi-view-quilt menu-icon"></i>
+            <span class="menu-title">Fakultas</span>
+            <div class="badge badge-info badge-pill">2</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={{url('prodi')}}>
+            <i class="mdi mdi-view-quilt menu-icon"></i>
+            <span class="menu-title">Prodi</span>
+            <div class="badge badge-info badge-pill">2</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href={{url('mahasiswa')}}>
+            <i class="mdi mdi-view-quilt menu-icon"></i>
+            <span class="menu-title">Mahasiswa</span>
+            <div class="badge badge-info badge-pill">2</div>
+          </a>
+        </li>
         <li class="nav-item sidebar-category">
           <p>Components</p>
           <span></span>

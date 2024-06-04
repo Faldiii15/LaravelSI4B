@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\FakultasController;
+use App\Http\Controllers\MahasiswaController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.main');
 });
 
 Route::get('about',function(){

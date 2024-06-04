@@ -1,6 +1,6 @@
 <h1>Program Studi</h1>
 <ol>
-    @foreach ($viewlist as $ item)
+    @foreach ($viewlist as $item)
     <li> {{ $item }} </li>
     @endforeach
 </ol>
