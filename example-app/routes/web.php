@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\FakultasController;
@@ -44,6 +45,6 @@ Route::get('listdata',function(){
 
 route::resource('fakultas', FakultasController::class);
 route::resource('prodi', ProdiController::class);
-
- 
+route::resource('mahasiswa',MahasiswaController::class);
+route::resource('Dashboard',DashboardController::class); 
 
