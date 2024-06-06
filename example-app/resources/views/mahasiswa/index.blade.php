@@ -7,7 +7,7 @@
 <div class="col-lg-6 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title"> Fakultas</h4>
+        <h4 class="card-title"> Data Mahasiswa</h4>
         <p class="card-description">
           List data fakultas
         </p>
@@ -17,16 +17,22 @@
           <table class="table">
             <thead>
               <tr>
-                <th>Nama Fakultas</th>
-                <th>Singkatan</th>
+                <th>NPM</th>
+                <th>Nama</th>
+                <th>Foto</th>
+                <th>Program Studi</th>
+                <th>#</th>
               </tr>
             </thead>
             <tbody>
 
-                @foreach ($fakultas as $item)
+                @foreach ($mahasiswa as $item)
                 <tr>
-                    <td>{{ $item["nama"] }}  </td>
-                    <td>{{ $item["singkatan"]}} </td>
+                    <td>{{ $item["npm"] }}</td>
+                    <td>{{ $item["nama"] }}</td>
+                    <td><img src="{{ url('foto/'. $item["url_foto"]) }}"></td>
+                    <td>{{ $item["prodi"]["nama"] }}</td>
+                    <td>
                 </tr>        
             @endforeach
             </tbody>
@@ -46,8 +52,29 @@
       text: "{{session('success')}}",
       icon: "success"
     })</script>
-      
+    
+    
+
+});
   @endif
+  Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!"
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: "Deleted!",
+      text: "Your file has been deleted.",
+      icon: "success"
+    });
+  }
+});
+  
 
 @endsection
  

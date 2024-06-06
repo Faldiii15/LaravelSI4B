@@ -32,12 +32,18 @@ class MahasiswaController extends Controller
     public function store(Request $request)
     {
         $val = $request->validate([
-            'npm' => 'required|unique:mahasiswa',
+            'npm' => "required|unique:mahasiswa",
             'nama' => "required|unique:mahasiswa",
-            'tempat_lahir' => 'required',
-            'tanggal_lahir' => 'required',
-            'alamat' => 'required'
+            'tempat_lahir' => "required",
+            'tanggal_lahir' => "required",
+            'alamat' => "required",
+            'url_foto' => "required|file|mimes:png,jpg|max:5000",
+            'prodi_id' => "requiered"
         ]);
+
+        // ekstensi file yang di upload
+        $ext = $request->url_foto->getClientOriginalExtension();
+        // rename
 
         Mahasiswa::create($val);
 
